@@ -1,0 +1,454 @@
+ /*  G L O B A L   */
+ *{
+    margin: 0;
+    box-sizing: border-box;
+ }
+:root{
+    --mainColor: #1c1c1c;
+    --secondColor: #f4f4f4;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,navbar-brand{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ================================================== */
+/* N A V  */
+.navbar-brand{
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+ .navbar-expand-lg .navbar-nav .nav-link  {
+    font-size: .9rem;
+    font-weight: 400;
+}
+ .navbar-nav .nav-link.active {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+nav  li a::after{
+    content: "";
+    position: absolute;
+    background-color: var(--mainColor);
+    width: 0px;
+    height: 2px;
+    bottom: 0px;
+    right: 0;
+    left: 0px;
+    top: -10px;
+    margin: auto;
+    transition: .5s all;
+    padding-bottom:  0;
+    margin-bottom: 0;
+}
+nav  li button a{
+    padding-bottom:  0;
+}
+nav ul li:hover a::after{
+    width: 3rem;
+}
+
+
+/* ================================================== */
+.home{
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+} 
+.home-layer{
+    background-color: rgba(0, 0, 0,.65);
+}
+.home h3{
+    font-size: 3.2rem;
+    font-weight: 900;
+}
+h1{
+    font-size: 4rem;
+    font-weight: 100;
+}
+h1::after{
+    content: " |";
+    animation-name: title;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+@keyframes title{
+    0%{  content: " |";  }
+    1%{  content: " L|";  }
+    2%{  content: " La|";  }
+    3%{  content: " Lar|";  }
+    4%{  content: " Larr|";  }
+    5%{  content: " Larry|";  }
+    6%{  content: " Larry |";  }
+    7%{  content: " Larry D|";  }
+    8%{  content: " Larry Da|";  }
+    9%{  content: " Larry Dan|";  }
+    10%{  content: " Larry Dani|";  }
+    11%{  content: " Larry Danie|";  }
+    12%{  content: " Larry Daniel|";  }
+    20%{  content: "Larry Daniels|";  }
+    21%{  content: " Larry Daniel|";  }
+    22%{  content: " Larry Danie|";  }
+    23%{  content: " Larry Dani|";  }
+    24%{  content: " Larry Dan|";  }
+    25%{  content: " Larry Da|";  }
+    26%{  content: " Larry D|";  }
+    27%{  content: " Larry |";  }
+    28%{  content: " Larry|";  }
+    29%{  content: " Larr|";  }
+    30%{  content: " Lar|";  }
+    31%{  content: " La|";  }
+    32%{  content: " L|";  }
+    40%{  content: "|";  }
+    41%{  content: "D|";  }
+    42%{  content: "De|";  }
+    43%{  content: "Dev|";  }
+    44%{  content: "Deve|";  }
+    45%{  content: "Devel|";  }
+    46%{  content: "Develo|";  }
+    47%{  content: " Devlop|";  }
+    45%{  content: " Devlope|";  }
+    52%{  content: " Devloper|";  }
+    53%{  content: " Devlope|";  }
+    54%{  content: " Devlop|";  }
+    55%{  content: " Devlo|";  }
+    56%{  content: " Devl|";  }
+    57%{  content: " Dev|";  }
+    58%{  content: " De|";  }
+    59%{  content: " D|";  }
+    68%{  content: " |";  }
+    69%{  content: " D|";  }
+    70%{  content: " De|";  }
+    71%{  content: " Des|";  }
+    72%{  content: " Desi|";  }
+    73%{  content: " Desig|";  }
+    74%{  content: " Design|";  }
+    75%{  content: " Designe|";  }
+    83%{  content: " Designer|";  }
+    84%{  content: " Designe|";  }
+    85%{  content: " Design|";  }
+    86%{  content: " Desig|";  }
+    87%{  content: " Desi|";  }
+    88%{  content: " Des|";  }
+    89%{  content: " De|";  }
+    90%{  content: " D|";  }
+    100%{  content: " |";  }
+}
+
+.home-icons ul li{
+    list-style-type: none;
+    text-decoration: none;
+    margin:2.3rem .5rem 0;
+    font-size: .9rem;
+}
+
+.home-icon{
+    width: 37px;
+    height: 37px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+}
+.home-icon:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:600px){
+    .home-content h1,h1::after{
+        font-size: 2rem;
+    }
+  
+}
+
+/* ========================================== */
+
+
+/* S T A R T         A B O U T  */
+
+.about .about-imgs{
+    position: relative;
+    margin:0 0 50px 32px ;
+}
+.about .about-imgs::after{
+    content: "";
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    bottom: -32px; 
+    left: -30px;
+    z-index: -1;
+}
+h2{
+    color: var(--mainColor);
+    font-weight: 800;
+}
+.about-right .ui-ux {
+    font-size: .92rem;
+    letter-spacing: 2px;
+    padding-bottom: 4rem;
+    color: #999;
+}
+.about-right p {
+    color: #748182;
+    font-size: .9rem;
+    line-height: 1.65rem;
+    margin: 1.3rem 0;
+}
+.about-right .progress-bar{
+    background-color: var(--mainColor) ;
+    height: 1.6rem;
+    border-radius: 5px;  
+}
+.about-right .progress{
+    background-color: var(--secondColor) ;
+    height: 1.6rem;
+    margin-bottom: 2.5rem ;
+    box-shadow: 0 2px 2px 1px lightgray inset, 
+    0 2px 5px  1px lightgray inset;
+}
+.about-right .progress h5{
+    font-size: .8rem;
+}
+.about-right .progress h6{
+    font-size: .7rem;
+}
+.about button{
+    font-size: .8rem;
+    border: var(--mainColor) 1px solid;
+    border-radius: .4rem;
+    padding: .7rem 2rem;
+    font-weight: 200;
+    background-color: transparent;
+    transition: .5s all;
+}
+.about .btn-1 {
+    background-color: var(--mainColor);
+    color: white
+}
+.about .btn-1:hover{
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+}
+.about .btn-2:hover{
+    background-color: var(--mainColor);
+    color: white;
+    cursor: pointer;
+}
+
+/* ========================================== */
+
+
+/* S T A R T         S E R V I C E S  */
+.section-title h2{
+    font-size: 2.7rem;
+    font-weight: 900;
+    z-index: 2;
+ }
+.section-title h2::before{
+    content: "";
+    background-image: url(../img/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    width: 100%;
+    height: 1.7rem;
+    left: 0;
+    bottom: -10%;
+    z-index: -1;
+}
+.services{
+    background-color: var(--secondColor);
+}
+.sreve-icon {
+    background-color: var(--secondColor);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    transition: .5s all;
+}
+.serve-inner {
+    box-shadow: 0 3px 3px  lightgray , 
+    0 4px 7px lightgray ;
+}
+.serve-inner p{
+    font-size: .91rem;
+    line-height: 1.65rem;
+}
+.serve-inner:hover .sreve-icon{
+    background-color: var(--mainColor);
+    color: white;
+}
+
+/* ================================================= */
+
+/*   P O R T F O L I O    */
+.portfolio .nav-link{
+    background-color:white ;
+    border: none;
+    color: var(--mainColor);
+    font-weight: 600;
+}
+.nav-pills .nav-link.active{
+    background-color: transparent;
+    color: var(--mainColor);
+}
+.text-layer {
+    top: .3rem;
+    right: .3rem;
+    left: .3rem;
+    bottom: .3rem;
+    opacity: 0;
+    font-size: .8rem;
+    font-weight: 700;
+    transition: .5s all;
+}
+.text-layer i{
+    width: 30px;
+    height: 30px;
+    background-color: var(--mainColor);
+    color: white;
+}
+.text-layer h6{
+    color: var(--mainColor);
+    font-size: .8rem;
+    font-weight: 700;
+    top: .3rem;
+    right: .3rem;
+    left: .3rem;
+    bottom: .3rem;
+    margin-bottom: 1.3rem;
+}
+.port-inner:hover .text-layer{
+    opacity: 1;   
+}
+
+
+/* ========================================= */
+
+/*  T E S T I M O N I A L  */
+
+.clients{
+    background-color: var(--secondColor);
+}
+.carousel-item span{
+    font-size: .8rem;
+}
+.carousel-indicators [data-bs-target]{
+   height: 10px;
+   width: 10px; 
+   border-radius: 50%;
+   background-color: #D6D6D6;
+
+}
+
+
+/* ========================================== */
+
+
+/*   B L O G   */
+
+.blog{
+    background-color: var(--secondColor);
+}
+.carousel-item span{
+    font-size: .8rem;
+}
+.carousel-item p{
+    font-size: .9rem;
+    font-weight: 300;
+}
+.carousel-item h5{
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-top: .8rem;
+}
+.carousel-item img{
+    transition: .5s all;
+}
+.carousel-item img:hover{
+    transform: scale(1.2,1.2)
+}
+.carousel-indicators [data-bs-target]{
+    height: 10px;
+    width: 10px; 
+    border-radius: 50%;
+    background-color: #D6D6D6;
+}
+.carousel-item .card{
+    box-shadow: 0 3px 3px  lightgray , 
+    0 4px 7px lightgray ;
+}
+
+
+/* ============================================== */
+ 
+
+
+/*   N U M B E R S   */
+.one-num h3{
+    font-weight: 900;
+}
+.one-num p{
+    font-size: .9rem;
+}
+
+/* ============================================== */
+
+
+  /*    C O N T A C T    */
+
+.contact-icon{
+    height: 65px;
+    width: 65px;
+    background-color: var(--secondColor);
+    transition: all .5s;
+}
+.contact .con-item:hover .contact-icon{
+    background-color: var(--mainColor);
+    color: white;
+}
+
+.contact input,textarea{
+    background-color: var(--secondColor);
+    max-height: 8rem;
+}
+.contact button{
+    font-size: .8rem;
+    border: var(--mainColor) 1px solid;
+    border-radius: .4rem;
+    padding: .5rem 2.3rem;
+    font-weight: 200;
+    background-color: var(--mainColor);
+    color: white;
+    margin-left: .81rem;
+    transition: .5s all;
+
+}
+.contact button:hover{
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* ================================================== */
+
+
+/*   F O O T E R  */
+footer{
+    background-color: var(--mainColor);
+     font-size: .8rem;
+     padding: 2rem 0;
+}
+
+/* ============================================== */
